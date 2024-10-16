@@ -1,0 +1,6 @@
+crontab -e
+
+@reboot ~/.local/bin/iag-cli-linux start
+*/15 * * * * date > ~/src/iag-node/date-log.txt
+*/15 * * * * cd /home/jpcst/.local/bin && /bin/bash iag-cli-failcatcher.sh >> ~/src/iag-node/date-log.txt
+#* * * * * cd /home/jpcst/.local/bin && /bin/bash iag-cli-failcatcher.sh
